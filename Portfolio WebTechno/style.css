@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(24, 23, 23);
+}
+p{
+    text-align: justify;
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2em 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+
+
+  nav ul a {
+    font-size: 1.2em;
+  }
+
+  nav .btn {
+    display: none;
+  }
+
+
+
+ul{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+nav ul a{
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+}
+
+nav ul a:hover{
+    color: rgb(30, 255, 0);
+    opacity: 1;
+}
+
+.logo{
+    text-align: left;
+    font-size: 2em;
+    color: aliceblue;
+    font-weight: 800;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+.logo:hover{
+    opacity: 1;
+}
+
+.btn{
+    padding: 0.5em 1em;
+    color: aliceblue;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: rgb(55, 255, 37);
+    color: black;
+}
+span{
+    background: linear-gradient(rgb(120, 199, 109), rgb(89, 189, 105));
+    background-clip: text;
+    color: transparent;
+}
+#menu{
+    color: white;
+    font-size: 3em;
+    display: none;
+}
+section{
+    min-height: 100vh;
+    padding: 5% 15%;
+
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: white;
+}
+#home img{
+    width: 18vw;
+    border-radius: 50%;
+    margin-top: 3em;
+    border: 3px solid rgb(12, 255, 12);
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    max-width: 500;
+}
+
+.info-box h1{
+    font-size: 5em;
+    font-weight: 500;
+}
+
+.info-box h3{
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.info-box p{
+    opacity: 0.7;
+    text-align: center;
+}
+
+.btn-box{
+    display: flex;
+    gap: 1em;  
+}
+
+.btn-box .btn:nth-of-type(2){
+    background: linear-gradient(rgb(31, 158, 14), rgb(51, 228, 65));
+    color: white;
+}
+
+.btn-box .btn:nth-last-of-type(2):hover{
+    background-color: black;
+    color: white;
+}
+
+::-webkit-scrollbar{
+    width: 20px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(30, 255, 1), rgb(51, 228, 65));
+
+}
+
+#about{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+
+#about img{
+    width: 30vw;
+    border-radius: 1em;
+}
+
+.about-box{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2em;
+}
+
+.about-box h1{
+    font-size: 5em;
+}
+
+.about-box p{
+    color: white;
+    opacity: 0.8;
+}
+
+.skills{
+    display: flex;
+    text-align: left;
+    gap: 10em;
+}
+
+.skills ul{
+    font-size: 1.3em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    opacity: 0.8;
+    align-items: baseline;
+}
+
+.skills ul li span{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.2em;
+    transition: 0.3s ease-in-out;
+}
+
+.skills ul li span:hover{
+    transform: translateX(10px);
+}
+
+.skills ul li i{
+    font-size: 1.2em;
+}
+
+.about-box h2{
+    font-size: 2.5em;
+}
+
+#projects{
+    background-color: rgb(0, 0, 0);
+}
+
+#skills{
+    background-color: rgb(0, 0, 0);
+}
+
+.header{
+    text-align: center;
+    font-size: 5em;
+    margin: 0.5em 0;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 2em;
+}
+
+.box{
+    border: 3px solid rgb(29, 28, 28);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+    padding: 3em;
+    gap: 2em;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.box:hover{
+    border: 3px solid rgb(155, 152, 152);
+}
+
+.box p{
+    opacity: 0.8;
+}
+
+.box h1{
+    font-size: 2em;
+}
+
+.box img{
+    min-width: 25px;
+    border-radius: 0.5em;
+}
+
+#contact{
+    background-color: rgb(0, 0, 0);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+form .input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1em;
+}
+
+.info-box span{
+    font-size: 1.5em;
+}
+
+form input{
+    font-size: 1.3em;
+    padding: 1em 5em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+}
+
+form input:focus{
+    background-color: white;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+    bottom: 0;
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    padding: 5em 15%;
+}
+
+.col-left{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+.col-box{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.col-box img{
+    width: 2em;
+    height: 2em;
+}
+
+.col-box span{
+    font-size: 1.2em;
+}
+
+.col-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 500px;
+}
+
+.social-icons{
+    gap: 2em;
+}
+
+@media(max-width:968px){
+    section{
+        padding: 8em 15%;
+    }
+    nav .btn{
+        display: none;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    .link{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1em 3em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: black;
+        display: none;
+    }
+
+    .links a{
+        margin: 2em 0;
+        display: block;
+        font-size: 1.5em;
+        color: white;
+    }
+
+    .links.active{
+        display: block;
+    }
+    
+}
+
+@media(max-width:768px){
+
+}
